@@ -1,0 +1,70 @@
+
+{% extends 'layout.html' %}
+{% block title %} Create Customer {% endblock %}
+
+{% block content %}
+<div  class = "container" >
+<div class = "row" >
+<div  class = "col-md-6 col-md-offset-3" >
+
+     <b> Welcome  {{session ['name']}}</b>
+</div></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+.intro {
+  border-radius: 2px;
+  margin-left:350px;
+  margin-right:300px;
+  padding: 20px 10px 10px 10px;
+  }
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>index </title>
+
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='static/css/boot.css') }}">-->
+</head>
+
+<body>
+<center>
+    <h3> <font color="green"> <u>THANK YOU!!</u></font> </h3><br/>
+    <h4>The following customer details have been updated successfully.</h4>  </center>
+<div class="intro ">
+
+
+         <!--<b> Welcome  {{session ['email']}}</b>-->
+
+    <font color="red" ><b> Customer ID  = {{m[0]}} </b> </font><br>
+    <table style="height:200px; ">
+        <tr>
+        <td width="100px"><b> First Name :</b> </td> <td> {{m[1]}}
+        </td><td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Street: </b></td><td> {{m[3]}} </td>
+        </tr>
+        <tr>
+            <td width="100px"><b> Last Name :</b> </td> <td> {{m[2]}} </td>
+            <td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>  City:</b> </td><td>{{m[4]}} </td>
+        </tr>
+        <tr>
+            <td><b> Phone :</b> </td> <td> {{m[6]}} </td>
+            <td width="100px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> State :</b></td><td>{{m[5]}} </td>
+        </tr>
+        <tr>
+            <td><b> Email :</b> </td>  <td> {{m[7]}} </td>
+            <td width="100px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Pin Code :</b> </td><td>{{m[8]}} </td>
+        </tr>
+    </table>
+        <br/>
+        <center>
+             <a href="{{ url_for('acc') }}">  <button type="button" class="btn btn-primary mb-2"; style="width:120px">BACK </button></center>
+    </form>
+
+</div>
+
+
+</body>
+</html>
+{% endblock %}

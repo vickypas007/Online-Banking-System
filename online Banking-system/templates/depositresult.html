@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</htm
+{% extends 'layout.html' %}
+{% block title %} Deposit {% endblock %}
+
+{% block content %}
+<div  class = "container" >
+<div class = "row" >
+<div  class = "col-md-6 col-md-offset-3" >
+
+     <!--<b> Welcome  {{session ['name']}}</b>-->
+</div></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+.intro {
+  border-radius: 2px;
+  margin-left:350px;
+  margin-right:300px;
+  padding: 20px 10px 10px 10px;
+  }
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>index </title>
+
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='static/css/boot.css') }}">-->
+</head>
+<body>
+<center>
+    <h3> <font color="green"> <u>DEPOSIT MONEY </u></font> </h3><br/>
+<div class="intro ">
+<form name="ret" action="/deposit" method="post">
+    <table height="100px">
+        <tr>
+        <td width="180px"><b><font color="red"> Enter Account ID :</font> </b> </td>
+            <td><input type="number" class="form-control" name="id" required id="id"   >
+
+        </tr>
+        <tr>
+        <td width="180px"><b><font color="red"> Enter Amount :</font> </b> </td>
+            <td><input type="number" class="form-control" name="money" required id="money"   >
+
+        </tr>
+    </table>
+    <br>
+
+    <button type="submit" class="btn btn-primary mb-2"; style="width:150px">SUBMIT</button>
+    </form>
+<br>
+    <br>
+    <h3> Thank You!</h3>
+    <br>
+    <h4> <font color="green">Rs ' {{n}} ' has been deposited into A/C {{m}} </font> </h4>
+
+</center>
+
+
+</div>
+
+
+</body>
+</html>
+{%endblock%}l

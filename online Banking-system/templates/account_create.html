@@ -1,0 +1,63 @@
+
+{% extends 'layout.html' %}
+{% block title %} Account create {% endblock %}
+
+{% block content %}
+<div  class = "container" >
+<div class = "row" >
+<div  class = "col-md-6 col-md-offset-3" >
+
+     <!--<b> Welcome  {{session ['name']}}</b>-->
+</div></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+.intro {
+  border-radius: 2px;
+  margin-left:350px;
+  margin-right:300px;
+  padding: 20px 10px 10px 10px;
+  }
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>index </title>
+
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='static/css/boot.css') }}">-->
+</head>
+
+<body>
+<center>
+    <h3> <font color="green"> <u>THANK YOU!!</u></font> </h3><br/>
+    <h4>The account  have been created successfully.</h4>
+<div class="intro ">
+
+    <table style="height:250px; ">
+        <tr>
+        <td width="120px"><b><font color="red">Account ID :</font> </b> </td> <td><font color="red">{{m[0]}}</font>
+        </td><td width="150px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Account Type: </b></td><td> {{m[1]}} </td>
+        </tr>
+        <tr>
+            <td width="140px"><b> Minimum Balance :</b> </td> <td> {{m[2]}} </td>
+            <td width="150px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>  Nominee:</b> </td><td>{{m[4]}} </td>
+        </tr>
+        <tr>
+            <td width="150"><b> Balance :</b> </td> <td> {{m[3]}} </td>
+            <td width="190px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Nominee Relation :</b></td><td>{{m[5]}} </td>
+        </tr>
+
+    </table>
+        <br/>
+        <center>
+              <a href="/index"> <button type="button" class="btn btn-primary mb-2"; style="width:120px">BACK </button></center>
+
+</center>
+</div>
+
+
+</body>
+</html>
+{% endblock %}

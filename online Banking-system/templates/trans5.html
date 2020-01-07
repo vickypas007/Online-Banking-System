@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transation </title>
+</head>
+<body>
+
+</body>
+</htm
+{% extends 'layout.html' %}
+{% block title %} Transation {% endblock %}
+
+{% block content %}
+<div  class = "container" >
+<div class = "row" >
+<div  class = "col-md-6 col-md-offset-3" >
+
+     <!--<b> Welcome  {{session ['name']}}</b>-->
+</div></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+.intro {
+  border-radius: 2px;
+  margin-left:350px;
+  margin-right:300px;
+  padding: 20px 10px 10px 10px;
+  }
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>index </title>
+
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='static/css/boot.css') }}">-->
+</head>
+<body>
+<center>
+    <h3> <font color="green"> <u>GET CURRENT BALANCE </u></font> </h3><br/></center>
+<div class="intro ">
+<center>
+    <table>
+        <tr>
+        <td width="180px"><b><font color="red"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Account ID :</font> </b> </td>
+            <td><input type="number" class="form-control" name="id" required id="id"   >
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary mb-2"; style="width:150px">SUBMIT</button> </td>
+        </tr>
+    </table>
+    <br>
+
+
+    <table width="800px" height="200px">
+        <tr>
+            <th> SI NO</th>
+            <th> Amount </th>
+            <th> Timestamp</th>
+            <th> Balance</th>
+            <th> Description</th>
+        </tr>
+
+        {% for user in m %}
+    <tr>
+        <td> {{1}}</td>
+       <td>  {{user[0]}}</td>
+        <td>  {{user[1]}}</td>
+        <td>  {{user[2]}}</td>
+         <td>  {{user[3]}}</td>
+    </tr>
+        {% endfor %}
+    </table>
+    </center>
+</div>
+</body>
+</html>
+{%endblock%}

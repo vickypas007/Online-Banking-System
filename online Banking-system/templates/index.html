@@ -1,0 +1,63 @@
+
+{% extends 'layout.html' %}
+{% block title %} Banking {% endblock %}
+
+{% block content %}
+<div  class = "container" >
+<div class = "row" >
+<div  class = "col-md-6 col-md-offset-3" >
+</div></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+.intro {
+  border-radius: 2px;
+  margin-left:350px;
+  margin-right:300px;
+  padding: 20px 10px 10px 10px;
+  }
+}
+</style>
+
+    <meta charset="UTF-8">
+    <title>index </title>
+
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='static/css/boot.css') }}">-->
+</head>
+
+<body>
+<center>
+    <h3> <font color="green"> <u>CREATE CUSTOMER</u></font> </h3></center>
+<div class="intro ">
+    PLEASE ENTER THE FOLLOWING DETAILS
+    <form name="cust" action="\customer" method="post">
+    <table style="height:300px; ">
+        <tr>
+        <td width="100px"><b> First Name </b> </td> <td> <input type="text" class="form-control"  name="fname" required id="fname" >
+        </td><td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Street </b></td><td><input type="text" class="form-control" name="street" required id="street"   ></td>
+        </tr>
+        <tr>
+            <td width="100px"><b> Last Name</b> </td> <td><input type="text" class="form-control" name="lname" required id="lname" ></td>
+            <td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>  City </td><td><input type="text" class="form-control" name="city" required id="city" ></td>
+        </tr>
+        <tr>
+            <td><b> Phone</b> </td> <td><input type="number" class="form-control" name="phone" required id="phone"  required minlength="10" maxlength="10" ></td>
+            <td width="100px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> State </b></td><td><input type="text" class="form-control" name="state" ></td>
+        </tr>
+        <tr>
+            <td><b> Email</b> </td>  <td><input type="email" class="form-control" name="email" required id="email"></td>
+            <td width="100px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Pin Code</b> </td><td><input type="number" class="form-control"  name="pin" required id="pin" ></td>
+        </tr>
+    </table>
+        <br/>
+        <center>  <button type="submit" class="btn btn-primary mb-2"; style="width:120px">SUBMIT</button></center>
+    </form>
+
+</div>
+
+
+</body>
+</html>
+{% endblock %}

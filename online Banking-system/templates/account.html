@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% block title %} Create Customer {% endblock %}
+
+{% block content %}
+<div  class = "container" >
+<div class = "row" >
+<div  class = "col-md-6 col-md-offset-3" >
+
+
+</div></div></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.intro {
+  border-radius: 2px;
+  margin-left:400px;
+  margin-right:300px;
+  padding: 20px 10px 10px 10px;
+  }
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h3> <font color="green"> <u>CREATE ACCOUNT </u></font> </h3></center>
+    <div class="intro ">
+   <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLEASE ENTER THE FOLLOWING DETAILS.</h4>
+             <form name="account" action="\account" method="post">
+            <table style="height:270px; ">
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <font color="red"> <b>Customer ID : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{session ['customerid']}}</b></font>
+
+        <tr>
+        <td width="200px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Account Type </b></td>
+            <td> <select class="form-control"  name="atype">
+                <option value="">Select</option>
+                <option value="saving">Savings</option>
+                <option value="current">Current</option>
+            </select></td></tr>
+    <tr>
+        <td width="200px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Minimum Balance </b></td>
+        <td><input type="number" class="form-control" name="mbal" required id="mbal"   ></td>
+    </tr>
+                <tr>
+        <td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Balance </b></td>
+        <td><input type="number" class="form-control" name="bal" required id="bal"   ></td>
+
+    </tr>
+    <tr>
+        <td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Nominee Name </b></td>
+        <td><input type="text" class="form-control" name="nname" required id="nname"   ></td>
+    </tr>
+    <tr>
+        <td width="120px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Nominee Relation </b></td>
+        <td><input type="text" class="form-control" name="nrel" required id="nrel"   ></td>
+    </tr>
+</table>
+                 <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <button type="submit" class="btn btn-primary mb-2"; style="width:180px">CREATE ACCOUNT</button>
+             </form>
+        </div>
+
+
+</body>
+</html>
+{% endblock %}
